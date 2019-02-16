@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Star Wars RPG</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script scr="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assests/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assests/css/style.css">
+</head>
+
+<body>
+    <div id="pick" class="container">
+        <div class="img">
+            <p>Luke Skywalker</p>
+            <img src="assests/image/luke-skywalker.png" style="width: 200px; height: 200px">
+            <p id="luke-health"></p>
+        </div>
+        <div class="img">
+            <p>Darth Vader</p>
+            <img src="assests/image/darth-vader.png" style="width: 200px; height: 200px">
+            <p id="darth-health"></p>
+        </div>
+        <div class="img">
+            <p>Chewbacca</p>
+            <img src="assests/image/chewbacca.png" style="width: 200px; height: 200px">
+            <p id=chew-health"></p>
+        </div>
+        <div class="img">
+            <p>RTD2</p>
+            <img src="assests/image/rtd2.png" style="width: 200px; height: 200px">
+            <p id="rtd2-health"></p>
+        </div>
+    </div>
+    <h1>Your Character</h1>
+    <div id="attacker" class="container"></div>
+    <h1>Enemies Available To Attack</h1>
+    <div id="enemy" class="container"></div>
+    <button id="attack" class="button">⚔️ Attack ⚔️</button>
+    <h1>Your Enemies</h1>
+    <div id="defender" class="container"></div>
+    <script type="text/javascript" src="assests/javascript/game.js"></script>
+</body>
+
+</html>
