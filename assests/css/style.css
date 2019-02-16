@@ -47,3 +47,7 @@ h1{
   }
   
   .button:hover {opacity: 1}
+
+  .display{
+      display: none;
+  }

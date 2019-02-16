@@ -3,6 +3,8 @@ $(document).ready(function() {
     var enemy = $("#enemy");
     var attacker = $("attacker");
     var defender = $("defender");
+    var Ahealth = 0;
+    var Dhealth = 0; 
 
    ('.img').click(function(){
     $(this).addClass('img-attacker');
