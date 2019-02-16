@@ -1,28 +1,40 @@
-$(document).ready(function() {
+$(document).ready(function () {
     var pick = $("#pick");
     var enemy = $("#enemy");
-    var attacker = $("attacker");
-    var defender = $("defender");
+    var attacker = $("#attacker");
+    var defender = $("#defender");
     var Ahealth = 0;
-    var Dhealth = 0; 
+    var Dhealth = 0;
+    var attackerCheck = false;
+    var defenderCheck = false;
+    $('.img').click(function () {
+        $(this).addClass('img-attacker');
+        while (!attackerCheck) {
+            $(".img").each(function (index) {
+                if ($(this).hasClass('img-attacker')) {
+                    attacker.prepend($('.img-attacker'));
+                    attackerCheck = true;
+                } else {
+                    $(this).addClass('img-enemy');
+                    enemy.prepend($(this));
+                    defenderCheck = true;
+                }
+            });
+        }
+    });
 
-   ('.img').click(function(){
-    $(this).addClass('img-attacker');
-    pick();
-   });
+    $('.img').click(function () {
+        if (defenderCheck) {
+            if ($(this).hasClass('img-enemy')) {
+                $(this).addClass('img-defender');
 
-   function pick(){
-    if ($('.img').hasClass('img-attacker')){
-        $('.img-attacker').append(attacker);
-    }else{
-        $('.img').append(enemy);
-        $('.img').addClass('img-enemy');
-    }
-   }
-
-   ('.img-enemy').click(function(){
-    $(this).removeClass("img-enemy");
-    $(this).addClass('img-defender');
-    $(this).append(defender);
-   });
+                $('.img').each(function (index) {
+                    if ($(this).hasClass('img-defender')) {
+                        defender.prepend($(this));
+                        $(this).removeClass("img-enemy");
+                    }
+                });
+            }
+        }
+    });
 });
