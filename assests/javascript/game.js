@@ -41,7 +41,7 @@ $(document).ready(function () {
     });
 
     $('#attack').click(function attack() {
-        var test = $('.img-attacker').find('p').val();
+       var test = attacker.find('p').val();
         console.log(parseInt(test));
     });
 });
