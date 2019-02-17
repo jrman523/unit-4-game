@@ -126,7 +126,6 @@ $(document).ready(function () {
     });
 
     $('#restartBtn').click(function restart() {
-        console.log("hello");
         document.location.reload();
     });
 });
