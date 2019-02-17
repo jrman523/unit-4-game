@@ -30,6 +30,7 @@ h1{
 .img-defender{
     background-color : black;
     border: 5px solid green;
+    color: red;
 }
 .button {
     background-color: red;
